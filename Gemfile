@@ -27,6 +27,7 @@ end
 gem 'jquery-rails'
 gem 'high_voltage'
 gem 'heroku'
+gem 'unicorn'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
