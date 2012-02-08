@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class LinkTest < ActiveSupport::TestCase
-  GOOGLE_SLUG = "superman-spiderman-spiderman-batman-spiderman-wolverine-batman-wolverine-wolverine-spiderman-spiderman-spiderman-spiderman-batman-spiderman"
-  YAHOO_SLUG = "velociraptor-brachiosaur-diplodocus-tyrannosaur-tyrannosaur-velociraptor-tyrannosaur-diplodocus-tyrannosaur-brachiosaur-diplodocus-diplodocus-diplodocus-velociraptor"
+  GOOGLE_SLUG = "superman-spiderman-spiderman-batman-superman-wolverine-batman-batman-wolverine-spiderman-wolverine-superman-spiderman-batman-superman"
+  YAHOO_SLUG = "velociraptor-brachiosaur-diplodocus-velociraptor-tyrannosaur-tyrannosaur-velociraptor-diplodocus-tyrannosaur-diplodocus-brachiosaur-diplodocus-diplodocus-diplodocus"
   
   test "URI is required" do
     link = Link.new
