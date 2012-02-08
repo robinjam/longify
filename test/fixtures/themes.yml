@@ -1,0 +1,6 @@
+dinosaurs:
+    name: 'Dinosaurs'
+    words: ["brachiosaur", "tyrannosaur", "velociraptor", "diplodocus"]
+superheroes:
+    name: 'Superheroes'
+    words: ["batman", "spiderman", "superman", "wolverine"]
