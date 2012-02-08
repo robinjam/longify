@@ -1,0 +1,30 @@
+<table class="details">
+  <tr>
+    <th>Theme</th>
+    <td><%= @link.theme.name %></td>
+  </tr>
+  <tr>
+    <th>Original URI</th>
+    <td>
+      <input type="text" value="<%= @link.uri %>" readonly="readonly">
+      (<%= @link.uri.length %> characters)
+    </td>
+  </tr>
+  <tr>
+    <th>Longified URI</th>
+    <td>
+      <input id="longified-uri" type="text" readonly="readonly" value="<%= longify(@link) %>">
+      (<%= longify(@link).length %> characters)
+    </td>
+  </tr>
+  <tr>
+    <th>Size increase</th>
+    <td><%= calc_percentage_increase(@link) %> longer!</td>
+  </tr>
+  <tr>
+    <th>Clicks</th>
+    <td><%= @link.clicks.count %></td>
+  </tr>
+</table>
+
+<p><%= link_to "Longify another URI!", root_url %></p>
