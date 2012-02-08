@@ -13,11 +13,11 @@ class Link < ActiveRecord::Base
   end
   
   def slug
-    (id + 1000000).to_s(theme.words.count).scan(/./).map { |i| theme.words[i.to_i] }.join("-")
+    (id + 1000000).to_s(theme.words.count).scan(/./).map { |i| theme.words[i.to_i(theme.words.count)] }.join("-")
   end
   
   def self.find_by_subdomain_and_slug(subdomain, slug)
     words = Theme.find(:first, conditions: ["lower(name) = ?", subdomain.downcase]).words
-    find(slug.split("-").map { |t| words.index(t) }.join.to_i(words.count) - 1000000)
+    find(slug.split("-").map { |t| words.index(t).to_s(words.count) }.join.to_i(words.count) - 1000000)
   end
 end
