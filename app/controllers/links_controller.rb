@@ -22,7 +22,7 @@ class LinksController < ApplicationController
   end
   
   def redirect
-    @link = Link.find_by_subdomain_and_slug(request.subdomain, params[:id])
+    @link = Link.find_by_subdomain_and_slug!(request.subdomain, params[:id])
     unless @link.nil?
       @link.clicks.create!(ip: request.remote_ip, user_agent: request.user_agent, referer: request.referer)
       redirect_to @link.uri, status: :moved_permanently

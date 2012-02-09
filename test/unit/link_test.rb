@@ -42,7 +42,7 @@ class LinkTest < ActiveSupport::TestCase
   end
   
   test "find by slug" do
-    assert_equal links(:google), Link.find_by_subdomain_and_slug("superheroes", GOOGLE_SLUG)
-    assert_equal links(:yahoo), Link.find_by_subdomain_and_slug("dinosaurs", YAHOO_SLUG)
+    assert_equal links(:google), Link.find_by_subdomain_and_slug!("superheroes", GOOGLE_SLUG)
+    assert_equal links(:yahoo), Link.find_by_subdomain_and_slug!("dinosaurs", YAHOO_SLUG)
   end
 end
