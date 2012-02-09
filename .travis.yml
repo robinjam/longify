@@ -1,4 +1,5 @@
 language: ruby
+bundler_args: "--without development production"
 script: "bundle exec rake ci --trace"
 rvm:
   - 1.9.2
