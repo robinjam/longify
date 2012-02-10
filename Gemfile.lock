@@ -63,6 +63,8 @@ GEM
     mime-types (1.17.2)
     multi_json (1.0.4)
     pg (0.12.2)
+    pjax_rails (0.1.10)
+      jquery-rails
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.1)
@@ -122,6 +124,7 @@ DEPENDENCIES
   high_voltage
   jquery-rails
   pg
+  pjax_rails
   rails (= 3.2.1)
   sass-rails (~> 3.2.3)
   sqlite3
