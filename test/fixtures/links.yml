@@ -1,6 +1,9 @@
 google:
-    uri: "http://www.google.com"
-    theme: superheroes
+  uri: "http://www.google.com"
+  theme: superheroes
 yahoo:
-    uri: "http://www.yahoo.com"
-    theme: dinosaurs
+  uri: "http://www.yahoo.com"
+  theme: dinosaurs
+aol:
+  uri: "http://www.aol.com"
+  theme: dinosaurs
