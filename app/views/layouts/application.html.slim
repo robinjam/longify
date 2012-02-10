@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta charset="UTF-8"
+    title Longify
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+    header
+      h1
+        markdown:
+          [Longify](#{root_path}) *beta*
+
+    section{data-pjax-container}
+      = yield
+
+    footer
+      p
+        markdown:
+          &copy; #{Time.now.year} [James Robinson](http://robinjam.net)

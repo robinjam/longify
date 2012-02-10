@@ -1,0 +1,22 @@
+table.details
+  tr
+    th Theme
+    td = @link.theme.name
+  tr
+    th Original URI
+    td
+      input type="text" readonly="readonly" value="#{@link.uri}"
+      |  (#{@link.uri.length} characters)
+  tr
+    th Longified URI
+    td
+      input#longified_uri type="text" readonly="readonly" value="#{longify @link}"
+      |  (#{longify(@link).length} characters)
+  tr
+    th Size increase
+    td #{calc_percentage_increase(@link)} longer!
+  tr
+    th Clicks
+    td = @link.clicks_count
+
+p = link_to "Longify another URI!", root_url

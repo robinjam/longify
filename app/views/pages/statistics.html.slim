@@ -1,0 +1,7 @@
+h1 Statistics
+
+markdown:
+  The first link was longified on **#{Link.first.created_at}**. Since then, a total of **#{Link.count}** links have been longified.
+  
+  The most popular theme is **#{most_popular_theme.name}**, with a total of **#{most_popular_theme.links.count}** links.
+  The least popular is **#{least_popular_theme.name}**, with a total of only **#{least_popular_theme.links.count}**.

@@ -12,6 +12,8 @@
  *= require_tree .
 */
 
+@import "http://fonts.googleapis.com/css?family=Glegoo";
+
 body {
   background-color: #FFFFFA;
   color: #333;
@@ -19,8 +21,13 @@ body {
   text-align: center;
 }
 
+body > header h1 em {
+  color: #AAA;
+  font-style: inherit;
+}
+
 footer p {
-  font-size: 60%;
+  font-size: 80%;
 }
 
 .field_with_errors {
@@ -42,6 +49,7 @@ a:hover {
 input, select {
   border: solid 1px #CCC;
   padding: 10px;
+  margin: 4px;
   font-size: inherit;
   font-family: inherit;
 }
@@ -54,4 +62,19 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: white;
+}
+
+table {
+  margin: 0 auto;
+  border-spacing: 10px;
+}
+
+table.details th {
+  width: 50%;
+  text-align: right;
+}
+
+table.details td {
+  width: 50%;
+  text-align: left;
 }
