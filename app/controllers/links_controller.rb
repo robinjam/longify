@@ -14,7 +14,7 @@ class LinksController < ApplicationController
   end
   
   def index
-    redirect_to root_url
+    @links = Link.order('clicks_count DESC').paginate(:page => params[:page], :per_page => 20)
   end
   
   def show

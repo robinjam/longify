@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120208220348) do
+ActiveRecord::Schema.define(:version => 20120210192652) do
 
   create_table "clicks", :force => true do |t|
     t.integer  "link_id"
@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(:version => 20120208220348) do
   create_table "links", :force => true do |t|
     t.integer  "theme_id"
     t.string   "uri"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "clicks_count", :default => 0
   end
 
   add_index "links", ["theme_id"], :name => "index_links_on_theme_id"
