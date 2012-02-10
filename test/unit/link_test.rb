@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class LinkTest < ActiveSupport::TestCase
-  GOOGLE_SLUG = "superman-spiderman-spiderman-batman-spiderman-wolverine-batman-wolverine-wolverine-spiderman-spiderman-spiderman-spiderman-batman-spiderman"
-  YAHOO_SLUG = "velociraptor-brachiosaur-diplodocus-tyrannosaur-tyrannosaur-velociraptor-tyrannosaur-diplodocus-tyrannosaur-brachiosaur-diplodocus-diplodocus-diplodocus-velociraptor"
+  GOOGLE_SLUG = "spiderman-wolverine-batman-superman-spiderman-superman-batman-superman-batman-batman-superman-spiderman-superman-batman-spiderman-superman-batman-superman-wolverine-spiderman-wolverine-batman-spiderman-batman-batman-superman-wolverine-wolverine-batman-spiderman-wolverine-spiderman-batman-batman-batman-superman-spiderman-spiderman-wolverine-superman-superman-batman-batman-batman-spiderman-spiderman-spiderman-wolverine-superman-batman-spiderman-wolverine-spiderman-batman-wolverine-wolverine-spiderman-spiderman-batman-superman"
+  YAHOO_SLUG = "tyrannosaur-diplodocus-brachiosaur-velociraptor-tyrannosaur-velociraptor-brachiosaur-velociraptor-brachiosaur-brachiosaur-velociraptor-tyrannosaur-velociraptor-brachiosaur-tyrannosaur-velociraptor-brachiosaur-velociraptor-diplodocus-tyrannosaur-diplodocus-brachiosaur-tyrannosaur-brachiosaur-brachiosaur-velociraptor-diplodocus-diplodocus-brachiosaur-tyrannosaur-diplodocus-tyrannosaur-brachiosaur-brachiosaur-brachiosaur-velociraptor-tyrannosaur-tyrannosaur-diplodocus-velociraptor-velociraptor-brachiosaur-brachiosaur-brachiosaur-brachiosaur-diplodocus-velociraptor-diplodocus-tyrannosaur-brachiosaur-brachiosaur-brachiosaur-diplodocus-brachiosaur-diplodocus-velociraptor-diplodocus-diplodocus-diplodocus-diplodocus"
   
   test "URI is required" do
     link = Link.new

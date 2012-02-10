@@ -13,13 +13,17 @@ class Link < ActiveRecord::Base
   end
   
   def slug
-    (id - 1).to_s(theme.words.count).scan(/./).map { |i| theme.words[i.to_i(theme.words.count)] }.join("-")
+    (id + OFFSET).to_s(theme.words.count).scan(/./).map { |i| theme.words[i.to_i(theme.words.count)] }.join("-")
   end
   
   def self.find_by_subdomain_and_slug!(subdomain, slug)
     words = Theme.find(:first, conditions: ["lower(name) = ?", subdomain.downcase]).words
-    find(slug.split("-").map { |t| words.index(t).to_s(words.count) }.join.to_i(words.count) + 1)
+    find(slug.split("-").map { |t| words.index(t).to_s(words.count) }.join.to_i(words.count) - OFFSET)
   rescue
     raise ActiveRecord::RecordNotFound.new("Could not find link with slug=#{slug}, subdomain=#{subdomain}")
   end
+  
+  private
+  
+  OFFSET = 593910272593910272593910272593910272
 end
