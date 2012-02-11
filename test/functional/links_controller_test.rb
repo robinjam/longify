@@ -12,6 +12,7 @@ class LinksControllerTest < ActionController::TestCase
     end
     
     assert_equal "http://www.something.com", assigns(:link).uri
+    assert_redirected_to assigns(:link)
   end
   
   test "show" do
