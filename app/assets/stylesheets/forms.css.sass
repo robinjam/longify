@@ -1,14 +1,37 @@
-input, select
+=gradient($from, $to)
+  background-color: $from                                                          /* fallback/image non-cover color */
+  background-image: -moz-linear-gradient($from, $to)                               /* Firefox 3.6+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to)) /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-linear-gradient($from, $to)                            // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient($from, $to)                                 // Opera 11.10+
+
+input, select, .skinned-select
   border: solid 1px #CCC
   padding: 10px
-  margin: 4px
+  margin: 0
   font-size: inherit
   font-family: inherit
+  outline: none
+  
+#link_uri
+  box-shadow: inset 0 0 10px #DFDFDF
 
-input[type=submit]
-  background-color: #EEE
-  border-radius: 5px
-  cursor: pointer
+input[type=submit], .skinned-select
+  +gradient(lighten(#a70404, 20%), #a70404)
+  color: white
+  border-color: #a70404
+  box-shadow: inset 0 0 4px lighten(#a70404, 50%)
   
   &:hover
-    background-color: white
+    +gradient(lighten(#a70404, 30%), #a70404)
+  
+  &:active
+    +gradient(lighten(#a70404, 10%), #a70404)
+    box-shadow: inset 0 0 1px darken(#a70404, 10%)
+
+input[type=submit]
+  cursor: pointer
+  border-radius: 0 5px 5px 0
+
+.skinned-select
+  border-radius: 5px 0 0 5px

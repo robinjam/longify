@@ -2,7 +2,10 @@ p
   | #{link_to "About", page_path("about")} | #{link_to "Hall of Fame", links_path} | #{link_to "Statistics", page_path("statistics")}
 
 - if @link.errors.any?
-  p.error Please enter a valid URI beginning with either http:// or https://.
+  div.error
+    markdown:
+      ![Error](/alert.png)
+      Please enter a valid URI beginning with either http:// or https://.
 
 = form_for @link do |f|
   = f.select :theme, options_from_collection_for_select(Theme.all, :id, :name)

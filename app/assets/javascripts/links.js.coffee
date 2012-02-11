@@ -5,6 +5,9 @@ jQuery ->
   # Focus and select the longified URI on the show link page, if present
   $("#longified_uri").focus().select()
   
+  # Skin all select elements
+  $("select").skin_select()
+  
   $('body')
     .bind 'start.pjax', ->
       # Fade the main content out
@@ -19,3 +22,6 @@ jQuery ->
       
       # Focus the input box on the new link page, if present
       $("#link_uri").focus()
+      
+      # Re-skin the select elements
+      $("select").skin_select()
