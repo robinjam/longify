@@ -31,6 +31,7 @@ gem 'pjax_rails'
 gem 'will_paginate'
 gem 'slim'
 gem 'redcarpet'
+gem 'thin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
