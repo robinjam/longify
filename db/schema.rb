@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120210192652) do
+ActiveRecord::Schema.define(:version => 20120211200046) do
 
   create_table "clicks", :force => true do |t|
     t.integer  "link_id"
     t.string   "ip"
-    t.string   "user_agent"
-    t.string   "referer"
+    t.text     "user_agent"
+    t.text     "referer"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20120210192652) do
 
   create_table "links", :force => true do |t|
     t.integer  "theme_id"
-    t.string   "uri"
+    t.text     "uri"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.integer  "clicks_count", :default => 0
