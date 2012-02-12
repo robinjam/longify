@@ -7,3 +7,4 @@ yahoo:
 aol:
   uri: "http://www.aol.com"
   theme: dinosaurs
+  flagged: true

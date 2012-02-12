@@ -11,7 +11,7 @@ class LinksController < ApplicationController
   end
   
   def index
-    @links = Link.order('clicks_count DESC').paginate(page: params[:page], per_page: 20)
+    @links = Link.safe.order('clicks_count DESC').paginate(page: params[:page], per_page: 20)
   end
   
   def show
@@ -19,8 +19,10 @@ class LinksController < ApplicationController
   end
   
   def redirect
-    link = Link.find_by_subdomain_and_slug!(request.subdomain, params[:id])
-    link.clicks.create!(ip: request.remote_ip, user_agent: request.user_agent, referer: request.referer)
-    redirect_to link.uri, status: :moved_permanently
+    @link = Link.find_by_subdomain_and_slug!(request.subdomain, params[:id])
+    if !@link.flagged? || params[:confirm]
+      @link.clicks.create!(ip: request.remote_ip, user_agent: request.user_agent, referer: request.referer)
+      redirect_to @link.uri, status: :moved_permanently
+    end
   end
 end

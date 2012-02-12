@@ -21,6 +21,10 @@ class LinkTest < ActiveSupport::TestCase
     assert link.errors[:uri].any?
   end
   
+  test "safe scope" do
+    assert !Link.safe.include?(links(:aol))
+  end
+  
   test "deletes associated clicks on destroy" do
     assert_difference("Click.count", -links(:google).clicks.count) { links(:google).destroy }
   end

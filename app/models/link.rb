@@ -8,6 +8,8 @@ class Link < ActiveRecord::Base
   
   before_validation -> { uri.try(:gsub!, /\/*$/, "") }
   
+  scope :safe, where(flagged: false)
+  
   def subdomain
     theme.name.downcase
   end

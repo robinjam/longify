@@ -1,0 +1,10 @@
+h2 Warning
+
+p You are about to be redirected to the following page, which has been flagged as potentially offensive. Are you sure you wish to continue?
+  
+p.uri #{@link.uri}
+
+p 
+  a{href="?confirm=true" data-skip-pjax} Yes, redirect me
+  |  | 
+  a{href="javascript:history.back()" data-skip-pjax} No, take me back!
