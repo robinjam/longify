@@ -26,7 +26,6 @@ end
 
 gem 'jquery-rails'
 gem 'high_voltage'
-gem 'heroku'
 gem 'pjax_rails'
 gem 'will_paginate'
 gem 'slim'
