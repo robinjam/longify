@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  layout "application"
+
   protect_from_forgery
   
   # TODO: Find a better solution than this!
