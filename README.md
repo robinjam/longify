@@ -1,6 +1,6 @@
 # Longify
 
-[![Build Status](https://secure.travis-ci.org/robinjam/longify.net.png)](http://travis-ci.org/robinjam/longify.net)
+[![Build Status](https://travis-ci.org/robinjam/longify.net.svg?branch=master)](https://travis-ci.org/robinjam/longify.net)
 [![Dependency Status](https://gemnasium.com/robinjam/longify.net.png)](https://gemnasium.com/robinjam/longify.net)
 [![Code Climate](https://codeclimate.com/github/robinjam/longify.net.png)](https://codeclimate.com/github/robinjam/longify.net)
 
