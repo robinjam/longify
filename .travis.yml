@@ -1,8 +1,0 @@
-language: ruby
-bundler_args: "--without development production"
-script: "bundle exec rake ci --trace"
-rvm:
-  - 2.2.1
-branches:
-  only:
-    - master
