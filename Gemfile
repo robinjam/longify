@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+ruby '2.2.5'
 
 gem 'rails', '3.2.22'
+gem 'test-unit', '~> 3.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
